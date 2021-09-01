@@ -21,6 +21,8 @@ let code = location.search.substring(6);
 async function getTokens() {
 
     let response = await fetch('https://api.intra.42.fr/oauth/token', {
+        mode: 'cors',
+        credentials: 'include',
         method: 'POST',
         body: 'grant_type=authorization_code&client_id=' + uid + '&client_secret=' + secret +
             '&code=' + code +
@@ -67,6 +69,8 @@ async function getUserData() {
 
 async function getUsers() {
     let response = await fetch('https://api.intra.42.fr/v2/cursus/21/cursus_users?filtre[created_at]=2020-11-11T09:57:18.084Z&filter[campus_id]=16&range[begin_at]=2019-10-16T00:00:00.000Z,2019-10-17T00:00:00.000Z&page=$pageNumber&per_page=100', {
+        mode: 'cors',
+        credentials: 'include',
         headers: {
             'Authorization': tokenType + ' ' + accessToken,
             'Content-Type': 'application/x-www-form-urlencoded'
