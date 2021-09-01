@@ -2,13 +2,13 @@
 
 const uid = "8a5ef4d517ef1a5d4d7d467f6ecfe6823e313ef81cca8b1541aa55f341c83728";
 const secret = "91bbcaca204bc2b7532ed4d597c6fddea93d364d9344ac193e42a21f49bc49d7";
-const redirectUrl = "http://127.0.0.1:5500/";
+const redirectUrl = "https://42apitesting.netlify.app";
 let accessToken;
 let refreshToken;
 let tokenType;
 
 function AuthentificationTheUser() {
-    location.href = "https://api.intra.42.fr/oauth/authorize?client_id=8a5ef4d517ef1a5d4d7d467f6ecfe6823e313ef81cca8b1541aa55f341c83728&redirect_uri=http%3A%2F%2F127.0.0.1%3A5500%2F&response_type=code";
+    location.href = "https://api.intra.42.fr/oauth/authorize?client_id=8a5ef4d517ef1a5d4d7d467f6ecfe6823e313ef81cca8b1541aa55f341c83728&redirect_uri=https%3A%2F%2F42apitesting.netlify.app&response_type=code";
 };
 
 const loginButton = document.querySelector("#login");
